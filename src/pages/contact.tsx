@@ -5,7 +5,7 @@ function Contact() {
     return <>
         <Seo pageTitle="Contact page title"
              pageDescription="Contact page description"
-             pageImage="/images/contact.jpg"
+             pageImage={`${global?.window?.location}/images/contact.jpg`}
         />
         <Layout>
             <p>Contact page</p>
