@@ -7,7 +7,7 @@ function Home() {
     return <>
         <Seo pageTitle="Home page title"
              pageDescription="Home page description"
-             pageImage={`${global?.window?.location}/images/home.jpg`}
+             pageImage={`${global?.window?.location?.origin}/images/home.jpg`}
         />
         <Layout>
         <p>Home page</p>
