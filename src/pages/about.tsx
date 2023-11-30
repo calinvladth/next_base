@@ -1,11 +1,11 @@
 import Layout from "@/components/layout";
-import Seo from "@/components/seo";
+import HeadWithSeo from "@/components/head-with-seo";
 
 function About() {
     return <>
-        <Seo pageTitle="About page title"
-             pageDescription="About page description"
-             pageImage="/images/about.jpg"
+        <HeadWithSeo pageTitle="About page title"
+                     pageDescription="About page description"
+                     pageImage="/images/about.jpg"
         />
         <Layout>
             <p>About page</p>

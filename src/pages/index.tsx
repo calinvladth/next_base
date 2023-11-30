@@ -1,13 +1,12 @@
 import Layout from "@/components/layout";
-import Seo from "@/components/seo";
+import HeadWithSeo from "@/components/head-with-seo";
 import {useRouter} from "next/router";
 
 function Home() {
-    console.log('path', global?.window?.location)
     return <>
-        <Seo pageTitle="Home page title"
-             pageDescription="Home page description"
-             pageImage={`${global?.window?.location?.origin}/images/home.jpg`}
+        <HeadWithSeo pageTitle="Home page title"
+                     pageDescription="Home page description"
+                     pageImage="/images/home.jpg"
         />
         <Layout>
         <p>Home page</p>

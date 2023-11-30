@@ -1,12 +1,11 @@
 import Layout from "@/components/layout";
-import Seo from "@/components/seo";
+import HeadWithSeo from "@/components/head-with-seo";
 
 function Contact() {
-    console.log(global?.window?.location)
     return <>
-        <Seo pageTitle="Contact page title"
-             pageDescription="Contact page description"
-             pageImage={`${global?.window?.location?.origin}/images/contact.jpg`}
+        <HeadWithSeo pageTitle="Contact page title"
+                     pageDescription="Contact page description"
+                     pageImage="/images/contact.jpg"
         />
         <Layout>
             <p>Contact page</p>

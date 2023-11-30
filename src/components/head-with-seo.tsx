@@ -5,7 +5,7 @@ type SeoProps = {
     pageTitle: string,
     pageDescription: string,
     pageImage: string,
-    type?: string
+    type?: string,
 }
 
 
@@ -14,7 +14,7 @@ type SeoProps = {
     pageDescription -> for page description and social description
     pageImage -> for social image
  */
-function Seo({pageTitle, pageDescription, pageImage, type='website'}: SeoProps) {
+function HeadWithSeo({pageTitle, pageDescription, pageImage, type='website'}: SeoProps) {
     return <Head>
         <title>{pageTitle}</title>
         <meta name='description' content={pageDescription}/>
@@ -32,7 +32,8 @@ function Seo({pageTitle, pageDescription, pageImage, type='website'}: SeoProps) 
         {/*<meta name="twitter:card" content={type}/>*/}
         {/*<meta name="twitter:title" content={pageTitle}/>*/}
         {/*<meta name="twitter:description" content={pageDescription}/>*/}
+        <link rel="icon" type="image/x-icon" href="/images/rocket-red.svg"/>
     </Head>
 }
 
-export default Seo
+export default HeadWithSeo
