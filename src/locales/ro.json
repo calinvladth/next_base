@@ -1,0 +1,23 @@
+{
+  "Common": {
+    "title": "titlu website"
+  },
+  "HomePage": {
+    "title": "titlu pagina acasa",
+    "meta": {
+      "title": "titlu pagina acasa meta"
+    }
+  },
+  "AboutPage": {
+    "title": "titlu pagina despre",
+    "meta": {
+      "title": "titlu pagina despre meta"
+    }
+  },
+  "ContactPage": {
+    "title": "titlu pagina contact",
+    "meta": {
+      "title": "titlu pagina contact meta"
+    }
+  }
+}

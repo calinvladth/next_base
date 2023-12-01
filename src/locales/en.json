@@ -1,0 +1,23 @@
+{
+  "Common": {
+    "title": "page title"
+  },
+  "HomePage": {
+    "title": "homepage title",
+    "meta": {
+      "title": "homepage title meta"
+    }
+  },
+  "AboutPage": {
+    "title": "about page title",
+    "meta": {
+      "title": "about page title meta"
+    }
+  },
+  "ContactPage": {
+    "title": "contact page title",
+    "meta": {
+      "title": "contact page title meta"
+    }
+  }
+}
