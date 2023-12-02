@@ -5,11 +5,23 @@ import {ThemeProvider} from "styled-components";
 import theme from "@/theme/theme";
 import GlobalStyle from "@/theme/globalStyle";
 import {Raleway} from "next/font/google";
+import {useEffect} from "react";
+import {initGA, logPageView} from "@/utils/google-analytics-service";
+import {usePathname} from "next/navigation";
 
 const raleway = Raleway({subsets: ['latin']})
 
 export default function App({Component, pageProps}: AppProps) {
     const router = useRouter();
+    const pathname = usePathname()
+
+    useEffect(() => {
+        initGA();
+    }, [])
+
+    useEffect(() => {
+        logPageView();
+    }, [pathname])
 
     return (
         <NextIntlClientProvider
