@@ -8,6 +8,7 @@ import {Raleway} from "next/font/google";
 import {useEffect} from "react";
 import {initGA, logPageView} from "@/utils/google-analytics-service";
 import {usePathname} from "next/navigation";
+import Script from "next/script";
 
 const raleway = Raleway({subsets: ['latin']})
 
@@ -30,10 +31,24 @@ export default function App({Component, pageProps}: AppProps) {
             messages={pageProps.messages}
         >
             <main className={raleway.className}>
-            <ThemeProvider theme={theme}>
-                <GlobalStyle/>
-                <Component {...pageProps} />
-            </ThemeProvider>
+
+                <Script async
+                        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_TRACKING_ID}`}></Script>
+                <Script id="google-analytics">
+                    {`
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+
+                  gtag('config', '${process.env.NEXT_PUBLIC_GA_TRACKING_ID}'); 
+                `}
+                </Script>
+
+                <ThemeProvider theme={theme}>
+                    <GlobalStyle/>
+                    <Component {...pageProps} />
+                </ThemeProvider>
+
             </main>
         </NextIntlClientProvider>
     );

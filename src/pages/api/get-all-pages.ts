@@ -9,7 +9,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
 
 // TODO: Probably move this somewhere else
-const EXCLUDES_PAGES = ['_app']
+const EXCLUDES_PAGES = ['_app', '_document']
 
 async function getPages(pagesDirectory: string, baseRoute=''): Promise<string[]> {
     const entries = await fs.promises.readdir(pagesDirectory, { withFileTypes: true });
