@@ -11,7 +11,7 @@ function Home() {
                      pageImage="/images/home.jpg"
         />
         <Layout>
-        <p>{t('title')}</p>
+        <p>{t('title')} / {process.env.NEXT_PUBLIC_URL}</p>
     </Layout>
     </>
 }

@@ -16,7 +16,7 @@ function generateSiteMap({pages}: { pages: string[] }) {
 
 export async function getServerSideProps(context: NextPageContext) {
     // Generate the XML sitemap with the blog data
-    const pagesResponse = await fetch('http://localhost:3000/api/get-all-pages')
+    const pagesResponse = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/get-all-pages`)
     const pages = await pagesResponse.json()
 
     const sitemap = generateSiteMap({pages});
