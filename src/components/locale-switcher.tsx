@@ -5,7 +5,7 @@ export default function LocaleSwitcher() {
 
     return (
         <select value={locale}  name="language" onChange={e => push(route, route,{locale: e.target.value})}>
-            {locales?.map(language => <option value={language}>{language}</option>)}
+            {locales?.map(language => <option value={language} key={language}>{language}</option>)}
         </select>
     );
 }
